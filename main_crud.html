@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Main Crud Page </title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+            <h1>CRUD SYSTEM</h1>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Name">
+
+            <input type="file" id="myChooseImage" placeholder="chooseImage"/>
+            
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <input onkeyup="getTotal()" type="number" id="Qty" placeholder="Qty">
+                <small id="total"></small>
+            </div>
+
+            <input type="text" id="category" placeholder="category">
+            <input type="text" id="description" placeholder="Description"  />
+            <button id="submit"> Create </button>
+        </div>
+
+    
+
+            <div class="orderPage">
+                <a href="OrderPage.html" id="btn-order" > Go To Orders Page </a>
+            </div>
+
+            
+            <p id="searge">Search In Your Products</p>
+
+            <div class="outputs">
+                <input onkeyup = 'searchData(this.value)' type="text" id="search" placeholder="search">
+                <div class="searchBy">
+                    <button  onclick="getSearchMood(this.id)" id="search by title"> search by title </button>
+                    <button  onclick="getSearchMood(this.id)" id="search by category"> search by category </button>
+                </div>
+
+
+            <div class="deletePro"></div>
+            <table>
+                <thead>
+                    <th> ID </th>
+                    <th> title </th>
+                    <th> price </th>
+                    <th> discount </th>
+                    <th> Qty </th>
+                    <th> total </th>
+                    <th> image </th>
+                    <th> category </th>
+                    <th id="description"> Description </th>
+                    <th> update </th>
+                    <th> delete </th>
+                </thead>
+                <tbody id="tbody"> 
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+<script src="javascript/js.js"></script>
+</body>
+</html>

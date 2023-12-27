@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" onsubmit="vaild(event)">
+            <img src="images/ram_ecommerce.png" style="width: 100%;height: 300px; text-align:center;align-content:center;margin-bottom: 5dp;"/>
+            <div class="inputbox">
+                <input type="text" placeholder="username" id="loginarea">
+                <img src="images/user.png" margin-top="10px">
+            </div>
+            
+            <div class="inputbox">
+                <input type="password" placeholder="password" id="password">
+                <img src="images/lock.png" margin-top="10px">
+            </div>
+
+            <div class="remember">
+                <label><input type="checkbox" placeholder="Password">Remember me</label>
+
+            </div>
+
+            <button id="redirectButton" class="button">login</button>
+
+            <div class="register">
+                <p>Don't Have an Acount?<a href="register.html">Register</a></p>
+            </div>
+            <span id="error"></span>
+
+        </form>
+    </div>
+
+
+    </div>
+    <script>
+        let error = document.getElementById('error')
+        var L = document.getElementById("loginarea")
+        var p = document.getElementById("password")
+        var storedUsername = window.localStorage.getItem("username", "username");
+        var storedPassword = window.localStorage.getItem("password", "password");
+ 
+        function vaild(e) {
+                e.preventDefault()
+            if (L.value === "admin" && p.value === "admin"){
+                window.open("/main_crud.html");
+                sessionStorage.setItem('username' ,L.value);
+                sessionStorage.setItem('password' ,p.value);
+            } else if (L.value === storedUsername && p.value === storedPassword) {
+               sessionStorage.setItem('username', L.value);
+               sessionStorage.setItem('password', p.value);
+                window.open("/Home.html");
+            }
+
+            else {
+                error.innerHTML = "sorry your password or username is not correct";
+                error.style.color = "red";
+            }
+        }
+    </script>
+
+<!-- Link Css Style -->
+<link rel="stylesheet" href="css/style_login.css">
+<script src="javascript/login_register.js"></script>
+
+</body>
+
+</html>

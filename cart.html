@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cart </title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/ram_ecommerce.png " alt="..." />
+        </div>
+    
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="##">About</a> </li>
+                <li> <a href="##"> Our Policies </a> </li>
+        <li id="usernameDisplay"><a href="login.html">login</a> </li>
+        <li id="logouts" style="display: none;"><a onclick="logout()">logout</a> </li> 
+            </ul>
+    
+            <div class="cart">
+                <a href="cart.html" id="cart-link">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <span id="cart-Counter">0</span>
+                </a>
+            </div>
+            <a href="wishlist.html" class="wishListIcon">
+                &#9825;
+            </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <table>
+            <tbody id="Products"></tbody>
+        </table>
+    </div>
+
+    <button id="up">🡱</button><br>
+
+    <section id="se8">
+        <div class="footer-container">
+            <div class="left">
+                <span>Return policy</span>
+                <span>Search our store</span>
+                <span>Blog</span>
+                <span>Contact us</span>
+                <span>About us</span>
+            </div>
+            <div class="mid">
+    
+                <span>Facebook </span>
+                <span>Twitter</span>
+                <span>Instagram</span>
+                <span>Youtube</span>
+            </div>
+            <div class="right">
+                <h3>Payment Methods</h3><br>
+                <img src="images/icons/visa.jpg">
+                <img src="images/icons/paypal.jpg">
+                <img src="images/icons/master.jpg"><br> <br>
+            </div>
+        </div>
+    
+    </section>
+
+<link rel="stylesheet" href="css/styleShowProducts.css">
+<script src="javascript/cart.js">  </script>
+<script src="javascript/mainShowProducts.js"> </script>
+<script src="javascript/login_register.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

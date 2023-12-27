@@ -1,0 +1,71 @@
+  /* Styles for the container holding all company divs */
+  .container-spider {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .main-content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .main-content ,h1 {
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+
+  /* Styles for individual company divs */
+  .company-div {
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Styles for the image */
+  .company-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+  }
+  .company-image{
+      width: 250px;
+      height: 250px;
+      text-align: center;
+  }
+  .company-image:hover { 
+  background-color: #0056b3;
+  transform: scale(1.07) rotate(+2deg);
+  }
+
+  /* Style for the button */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    
+  }
+  
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.07) rotate(-2deg);
+
+  }

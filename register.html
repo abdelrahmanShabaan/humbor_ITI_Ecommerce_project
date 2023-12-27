@@ -1,0 +1,103 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style_register.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="" onsubmit="">
+            <h1>Registation Page</h1>
+            <div class="inputbox">
+                <div class="inputfield">
+                    <input type="text" placeholder="Full name" required>
+                    <img src="images/user.png" margin-top="10px">
+
+                </div>
+            </div>
+            <div class="inputbox">
+                <div class="inputfield">
+                    <input type="text" placeholder="username" required id="username">
+                    <img src="images/user.png" margin-top="10px">
+                    <span id="usernameError" style="color: red;"></span>
+                </div>
+            </div>
+            <div class="inputbox">
+                <div class="inputfield">
+                    <input type="email" placeholder="email" required>
+                    <img src="images/email.png">
+
+                </div>
+            </div>
+            <div class="inputbox">
+                <div class="inputfield">
+                    <input type="text" placeholder="phone Number" required>
+                    <img src="images/phone.png">
+                </div>
+
+            </div>
+            <div class="inputbox">
+                <div class="inputfield">
+                    <input type="password" placeholder="password" required id="pass1">
+                    <img src="images/lock.png" margin-top="10px">
+
+                </div>
+            </div>
+            <div class="inputbox">
+                <div class="inputfield">
+                    <input type="password" placeholder="confirm your password" id="pass2" required>
+                    <img src="images/lock.png" margin-top="10px">
+                    <span id="span"></span>
+                </div>
+            </div>
+            <label><input type="checkbox" required> Confirm that all the data is correct</label> <br>
+            <button type="submit" id="button">submit</button>
+            <a href="login.html" class="login_pager"> Login </a>
+    </div>
+
+    </form>
+
+    </div>
+    <script>
+
+        var password = document.getElementById("pass1")
+        var password2 = document.getElementById("pass2")
+        var username = document.getElementById("username")
+        var button = document.getElementById("button")
+        var span = document.getElementById("span")
+        var usernameError = document.getElementById("usernameError");
+      
+
+        document.querySelector("form").addEventListener("submit", function (e) {
+            if (username.value.length < 5) {
+                e.preventDefault();
+                usernameError.innerHTML = "Username must be at least 5 characters long.";
+                return
+            } else {
+
+                usernameError.innerHTML = "";
+            }
+            if (password.value != password2.value) {
+                e.preventDefault();
+                span.innerHTML = "password must match"
+                span.style.color = "red";
+
+            }
+            else {
+                window.localStorage.setItem("username", username.value)
+                window.localStorage.setItem("password", password.value)
+
+                window.open("login.html");
+            }
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

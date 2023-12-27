@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Home </title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="Home.html"><img src="images/ram_ecommerce.png " /></a>
+    </div>
+
+     <form>
+      <input onkeyup = 'searchData(this.value)' type="text" id="search" placeholder="search">
+      <button> Submit </button>
+    </form>
+    
+     
+    <nav>
+
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="about_us.html">About</a> </li>
+        <li><a href="##">Polices</a> </li>
+        <li id="usernameDisplay"><a href="login.html">login</a> </li>
+        <li id="logouts" style="display: none;"><a onclick="logout()">logout</a> </li>
+      </ul>
+
+      <div class="cart">
+        <a href="cart.html" id="cart-link">
+          <ion-icon name="cart-outline"></ion-icon>
+          <span id="cart-Counter">0</span>
+        </a>
+      </div>
+
+      <a href="wishlist.html" class="wishListIcon">
+        &#9825;
+      </a>
+    </nav>
+  </header>
+
+  <div class="container">
+  </div>
+  
+  <section id="se8">
+    <div class="footer-container">
+      <div class="left">
+        <span><a href="about_us.html"> About us </a></span>
+         <span> <a href="cart.html">Your Order</a></span> 
+         <span><a  href="wishlist.html">Your Wishlist</a> </span>
+         <span><a  href="##">Our Polices</a> </span>
+      </div>
+      <div class="mid">
+        <span>Facebook </span>
+        <span>Instagram</span>
+        <span>Youtube</span>
+        <span>Twitter</span>
+      </div>
+      <div class="right">
+        <h3>Payment Methods</h3><br>
+        <img src="images/icons/visa.jpg">
+        <img src="images/icons/master.jpg">
+        <img src="images/icons/paypal.jpg"><br>
+        <br>
+      </div>
+
+    </div>
+
+  </section>
+
+  <link rel="stylesheet" href="css/styleShowProducts.css" />
+  <script src="javascript/search.js"></script>
+  <script src="javascript/mainShowProducts.js"></script>
+  <script src="javascript/showProductsLocal.js"></script>
+  <script src="javascript/login_register.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@300;400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

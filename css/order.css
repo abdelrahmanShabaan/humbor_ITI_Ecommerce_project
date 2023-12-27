@@ -1,0 +1,43 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  table {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    width: 80%;
+  }
+  table thead th {
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+  #btnUpdate,
+  #btnDelete {
+    padding: 10px 20px;
+    border-radius: 17px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    background-color: #4e1c84;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  #btnDelete {
+    background-color: red;
+  }
+  th,
+  td {
+    padding: 7px;
+  }
+  td {
+    font-size: 17px;
+    margin-left: 30px;
+  }
+  #tableImage {
+    height: 150px;
+    width: 150px;
+  }
